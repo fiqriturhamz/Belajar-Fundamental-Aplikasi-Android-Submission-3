@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.fiqri_bfaa_3">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:fullBackupContent="@xml/backup_descriptor"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Fiqri_bfaa_2">
+        <activity
+            android:name="com.example.fiqri_bfaa_3.ui.setting.ThemeActivity"
+            android:exported="false"
+            android:parentActivityName=".ui.main.MainActivity"
+            >
+
+        <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value=".ui.main.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.example.fiqri_bfaa_3.ui.favorite.FavoriteActivity"
+            android:exported="false"
+            android:parentActivityName=".ui.main.MainActivity">
+
+        <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value=".ui.main.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.example.fiqri_bfaa_3.ui.splash.SplashActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.fiqri_bfaa_3.ui.detail.DetailUserActivity"
+            android:exported="true" />
+        <activity
+            android:name="com.example.fiqri_bfaa_3.ui.main.MainActivity"
+            android:exported="true" />
+    </application>
+
+</manifest>
